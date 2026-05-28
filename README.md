@@ -19,19 +19,19 @@ Open-pit mines face constant threat of rockfalls due to slope instability, weath
 
 ## 🧠 How It Works
 
-```
 Image Acquisition (Drone / CCTV / Mobile)
-        ↓
+↓
 Image Preprocessing (Resize, Normalize)
-        ↓
-AI Image Analysis (CNN / MobileNetV2)
-        ↓
+↓
+AI Image Analysis (CNN / ResNet)
+↓
 Risk Prediction Engine (High Risk / Warning / Safe)
-        ↓
+↓
 Weather + Seismic Fusion
-        ↓
+↓
 Visualization & Alert System (Dashboard + Popup Alerts)
-```
+
+Code
 
 ---
 
@@ -69,7 +69,6 @@ Visualization & Alert System (Dashboard + Popup Alerts)
 
 ## 📁 Project Structure
 
-```
 RockGuard-AI/
 ├── rockguard-backend/
 │   ├── main.py                 # FastAPI app + /predict endpoint
@@ -88,7 +87,7 @@ RockGuard-AI/
 │   └── .gitignore
 ├── .gitignore
 └── README.md
-```
+
 
 ---
 
@@ -98,17 +97,18 @@ RockGuard-AI/
 - Python 3.10+
 - Node.js 18+
 - npm
+
 ---
 
 ### 4️⃣ Using the App
 
-1. Open `http://localhost:5173` in your browser
-2. Upload a rock slope image (drone/CCTV/mobile photo)
-3. The system will:
-   - Analyze the image using the AI model
-   - Fetch live weather and seismic data
-   - Show a fused risk score (Safe / Warning / High Risk)
-   - Trigger an alert popup if High Risk is detected
+1. Open `http://localhost:5173` in your browser  
+2. Upload a rock slope image (drone/CCTV/mobile photo)  
+3. The system will:  
+   - Analyze the image using the AI model  
+   - Fetch live weather and seismic data  
+   - Show a fused risk score (Safe / Warning / High Risk)  
+   - Trigger an alert popup if High Risk is detected  
 
 ---
 
@@ -124,10 +124,10 @@ RockGuard-AI/
 
 ## 📊 Model Details
 
-- **Architecture:** MobileNetV2 (Transfer Learning)
+- **Architecture:** ResNet (Transfer Learning)
 - **Input:** 224×224 RGB rock slope image
 - **Output:** 3-class probability [High Risk, Safe, Warning]
-- **Preprocessing:** `mobilenet_v2.preprocess_input` normalization
+- **Preprocessing:** `resnet.preprocess_input` normalization
 - **Decision Logic:**
   - `High Risk` if probability > 0.40
   - `Warning` if probability > 0.40
@@ -138,4 +138,3 @@ RockGuard-AI/
 - GitHub — [Konskyrt](https://github.com/konskyrt) crack detection & segmentation images
 - GitHub — [Ravishankar](https://github.com/) rock test images
 - GitHub — [Kangcheng Liu](https://github.com/) UAV inspection crack dataset
-
