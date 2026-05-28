@@ -69,6 +69,7 @@ Code
 
 ## 📁 Project Structure
 
+```
 RockGuard-AI/
 ├── rockguard-backend/
 │   ├── main.py                 # FastAPI app + /predict endpoint
@@ -85,9 +86,12 @@ RockGuard-AI/
 │   ├── package.json
 │   ├── vite.config.js
 │   └── .gitignore
+│
 ├── .gitignore
 └── README.md
+```
 
+---
 
 ---
 
