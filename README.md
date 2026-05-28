@@ -86,10 +86,6 @@ RockGuard-AI/
 │   ├── package.json
 │   ├── vite.config.js
 │   └── .gitignore
-│
-├── docs/
-│   └── presentation.pdf        # Makeathon presentation slides
-│
 ├── .gitignore
 └── README.md
 ```
@@ -102,57 +98,6 @@ RockGuard-AI/
 - Python 3.10+
 - Node.js 18+
 - npm
-
----
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/RockGuard-AI.git
-cd RockGuard-AI
-```
-
----
-
-### 2️⃣ Backend Setup
-
-```bash
-cd rockguard-backend
-
-# Create virtual environment
-python -m venv venv
-
-# Activate (Windows)
-venv\Scripts\activate
-
-# Activate (Mac/Linux)
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-# Run the backend server
-uvicorn main:app --reload
-```
-
-Backend will be running at: `http://127.0.0.1:8000`
-
----
-
-### 3️⃣ Frontend Setup
-
-```bash
-cd ../rockguard-frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-Frontend will be running at: `http://localhost:5173`
-
 ---
 
 ### 4️⃣ Using the App
@@ -194,45 +139,3 @@ Frontend will be running at: `http://localhost:5173`
 - GitHub — [Ravishankar](https://github.com/) rock test images
 - GitHub — [Kangcheng Liu](https://github.com/) UAV inspection crack dataset
 
----
-
-## 📚 Research References
-
-| # | Paper | Publisher | Method |
-|---|---|---|---|
-| 1 | Rockfall Runout Range Prediction Using Improved KNN | IEEE Access (2023) | Improved KNN |
-| 2 | Rockfall Trajectory Prediction Using Computer Vision & Control Theory | Conference (2022) | CV + Control Theory |
-| 3 | GSS-PSO Neural Networks for Slope Risk Prediction | Journal of Intelligent Systems (2021) | GSS-PSO + Neural Networks |
-| 4 | Deep Learning and IoT-Based Rock-Fall Early Warning | MDPI Applied Sciences (2023) | Deep Learning + IoT |
-| 5 | Comparative Analysis: ML vs DL for Rockfall Prediction | IGDTUW Conference (2022) | RF, XGBoost, CNN, LSTM |
-
----
-
-## 🌍 Impact & Benefits
-
-- **Enhanced Mine Safety** — Prevents accidents before collapse
-- **Reduces Fatalities** — Early evacuation alerts
-- **Data-Driven Decisions** — AI insights replace manual inspections
-- **Low-Cost Deployment** — Uses existing CCTV and drone infrastructure
-- **Scalable** — From single mines to state-level monitoring systems
-- **Offline Capable** — Works in remote low-connectivity zones
-
----
-
-## 🎯 Target Users
-
-- Mining companies & safety teams
-- Government authorities (DGMS / Mining Dept.)
-- Public Sector Units (PSUs) — large open-pit mines
-- Researchers & consultants studying slope stability
-- Smart mine integrators & OEM surveillance platforms
-
----
-
-## 🚧 Known Limitations & Future Work
-
-- [ ] Image quality can degrade in poor lighting — augmentation pipeline being improved
-- [ ] Model needs more diverse labeled datasets across rock types
-- [ ] Add SMS/Email alert integration (Twilio / EmailJS)
-- [ ] Deploy on cloud (Render / Railway) for remote access
-- [ ] Add drone live-stream real-time inference
