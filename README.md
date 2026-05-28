@@ -1,10 +1,5 @@
 # 🪨 RockGuard AI — AI-Based Rockfall Prediction and Alert System
 
-> **MAKEATHON 3.0 | III Year | Team GeoSentinel**
-> Problem Statement ID: SIH25071 | Theme: Disaster Management | Category: Software
-
----
-
 ## 📌 Overview
 
 **RockGuard AI** is an intelligent, image-driven system that predicts rockfall risks in open-pit mines **before collapse occurs**. It combines Computer Vision, Deep Learning, and real-time Weather + Seismic intelligence to classify risk zones as **Safe**, **Warning**, or **High Risk** — and triggers automated alerts to mining safety teams.
@@ -44,7 +39,7 @@ Visualization & Alert System (Dashboard + Popup Alerts)
 
 | Feature | Description |
 |---|---|
-| 🔍 AI Image Analysis | MobileNetV2-based CNN model trained on crack/rockfall datasets |
+| 🔍 AI Image Analysis | ResNet-based CNN model trained on crack/rockfall datasets |
 | 🌦️ Weather Intelligence | Live data from Open-Meteo API (temp, humidity, rainfall, wind) |
 | 🌍 Seismic Monitoring | Real-time earthquake data from USGS GeoJSON feed |
 | 📊 Risk Fusion Score | Combines ML + Weather + Seismic into a final risk percentage |
@@ -59,7 +54,7 @@ Visualization & Alert System (Dashboard + Popup Alerts)
 
 ### Backend
 - **Python** — FastAPI framework
-- **TensorFlow / Keras** — MobileNetV2 deep learning model (`rockfall_final.h5`)
+- **TensorFlow / Keras** — ResNet deep learning model (`rockfall_final.h5`)
 - **Pillow + NumPy** — Image preprocessing
 - **Uvicorn** — ASGI server
 
@@ -136,11 +131,6 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 ```
-
-> ⚠️ **Model File:** `rockfall_final.h5` is not included in this repo due to file size (~20MB).
-> Download it from [Google Drive Link] and place it inside `rockguard-backend/`
-
-```bash
 # Run the backend server
 uvicorn main:app --reload
 ```
